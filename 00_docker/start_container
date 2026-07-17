@@ -76,7 +76,7 @@ docker run --rm -it \
 	-e NVIDIA_DRIVER_CAPABILITIES=all \
 	-v "$XSOCK:$XSOCK:rw" \
 	-v "$XAUTH:$XAUTH:rw" \
-	-v "$WORKSPACE_DIR:/workspace/Fusion_lidar:rw" \
-	-w /workspace/Fusion_lidar \
+	-v "$WORKSPACE_DIR:/workspace:rw" \
+	-w /workspace \
 	"$IMAGE_NAME" \
 	"$@"
